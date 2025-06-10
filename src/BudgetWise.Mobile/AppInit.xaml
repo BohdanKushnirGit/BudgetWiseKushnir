@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<abstractions:BaseContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                              xmlns:abstractions="clr-namespace:BudgetWise.Mobile.Abstractions"
+                              x:Class="BudgetWise.Mobile.AppInit"
+                              Loaded="AppInit_OnLoaded">
+    <abstractions:BaseContentPage.Content>
+        <Grid BackgroundColor="#FFFFFF"
+              ColumnDefinitions="32,*,32"
+              RowDefinitions="32,*,32">
+            <Image Grid.Column="1"
+                   Grid.Row="1"
+                   Source="launchscreen_transparent.png"/>
+        </Grid>
+    </abstractions:BaseContentPage.Content>
+</abstractions:BaseContentPage>

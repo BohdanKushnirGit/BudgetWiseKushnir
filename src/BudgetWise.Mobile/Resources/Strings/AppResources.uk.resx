@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EditProfile_Profile" xml:space="preserve">
+    <value>Профіль</value>
+  </data>
+  <data name="Pages_Home" xml:space="preserve">
+    <value>Головна</value>
+  </data>
+  <data name="Home_Balance" xml:space="preserve">
+    <value>Баланс</value>
+  </data>
+  <data name="Home_DailyAmounts" xml:space="preserve">
+    <value>Денні витрати</value>
+  </data>
+  <data name="Home_TomorrowBalance" xml:space="preserve">
+    <value>Завтра</value>
+  </data>
+  <data name="Home_TodayBalance" xml:space="preserve">
+    <value>Сьогодні</value>
+  </data>
+  <data name="Home_SpendingTypes" xml:space="preserve">
+    <value>Типи витрат</value>
+  </data>
+  <data name="Home_Main" xml:space="preserve">
+    <value>Основні</value>
+  </data>
+  <data name="Home_Secondary" xml:space="preserve">
+    <value>Другорядні</value>
+  </data>
+  <data name="Home_Saved" xml:space="preserve">
+    <value>Відкладені</value>
+  </data>
+  <data name="Settings_Categories" xml:space="preserve">
+    <value>Категорії</value>
+  </data>
+  <data name="Home_NoCategories" xml:space="preserve">
+    <value>Поки що немає категорій</value>
+  </data>
+  <data name="EditProfile_ProfileName" xml:space="preserve">
+    <value>Назва профіля</value>
+  </data>
+  <data name="EditProfile_InitialBalance" xml:space="preserve">
+    <value>Початковий баланс</value>
+  </data>
+  <data name="EditProfile_SaveProfile" xml:space="preserve">
+    <value>Зберегти профіль</value>
+  </data>
+  <data name="Pages_Transactions" xml:space="preserve">
+    <value>Транзакції</value>
+  </data>
+  <data name="AddTransaction_Income" xml:space="preserve">
+    <value>Доходи</value>
+  </data>
+  <data name="Pages_Settings" xml:space="preserve">
+    <value>Налаштування</value>
+  </data>
+  <data name="Pages_NewTransaction" xml:space="preserve">
+    <value>Транзакції</value>
+  </data>
+  <data name="AddTransaction_Expense" xml:space="preserve">
+    <value>Витрати</value>
+  </data>
+  <data name="AddTransaction_Category" xml:space="preserve">
+    <value>Категорія</value>
+  </data>
+  <data name="AddTransaction_Amount" xml:space="preserve">
+    <value>Сума в основній валюті</value>
+  </data>
+  <data name="AddTransaction_Description" xml:space="preserve">
+    <value>Опис</value>
+  </data>
+  <data name="AddTransaction_Date" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="AddTransaction_SaveTransaction" xml:space="preserve">
+    <value>Зберегти транзакцію</value>
+  </data>
+  <data name="Settings_Application" xml:space="preserve">
+    <value>Налаштування додатку</value>
+  </data>
+  <data name="Settings_General" xml:space="preserve">
+    <value>Основні</value>
+  </data>
+  <data name="Settings_Profiles" xml:space="preserve">
+    <value>Профілі</value>
+  </data>
+  <data name="Settings_Theme" xml:space="preserve">
+    <value>Тема</value>
+  </data>
+  <data name="Settings_Language" xml:space="preserve">
+    <value>Мова</value>
+  </data>
+  <data name="Categories_NoLimits" xml:space="preserve">
+    <value>Без обмежень</value>
+  </data>
+  <data name="Pages_NewCategory" xml:space="preserve">
+    <value>Категорії</value>
+  </data>
+  <data name="AddCategory_CategoryName" xml:space="preserve">
+    <value>Назва категорії</value>
+  </data>
+  <data name="AddCategory_SpecifyPlannedAmount" xml:space="preserve">
+    <value>Вказати плануєму суму</value>
+  </data>
+  <data name="AddCategory_PlannedAmount" xml:space="preserve">
+    <value>Плануєма сума</value>
+  </data>
+  <data name="AddCategory_SaveCategory" xml:space="preserve">
+    <value>Зберегти категорію</value>
+  </data>
+  <data name="ThemeSettings_LightTheme" xml:space="preserve">
+    <value>Світла</value>
+  </data>
+  <data name="ThemeSettings_Dark" xml:space="preserve">
+    <value>Темна</value>
+  </data>
+  <data name="ThemeSettings_System" xml:space="preserve">
+    <value>Системна</value>
+  </data>
+  <data name="Languages_English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Languages_Ukrainian" xml:space="preserve">
+    <value>Українська</value>
+  </data>
+  <data name="InfoAlert_ChangeLanguage_Title" xml:space="preserve">
+    <value>Попередження</value>
+  </data>
+  <data name="InfoAlert_ChangeLanguage_Message" xml:space="preserve">
+    <value>Щоб зміни вступили в силу, потрбіно перезапустити додаток.</value>
+  </data>
+  <data name="InfoAlert_ChangeLanguage_Ok" xml:space="preserve">
+    <value>Зрозуміло</value>
+  </data>
+  <data name="ErrorAlert_Title" xml:space="preserve">
+    <value>Помилка</value>
+  </data>
+  <data name="ErrorAlert_Ok" xml:space="preserve">
+    <value>ОК</value>
+  </data>
+  <data name="ErrorAlert_Description" xml:space="preserve">
+    <value>Виникла помилка</value>
+  </data>
+  <data name="CommonError_GetCategoryInfo" xml:space="preserve">
+    <value>Не вдалося отримати інформацію за категорією</value>
+  </data>
+  <data name="CommonError_ShowFilteredTransactions" xml:space="preserve">
+    <value>Не вдалося відкрити відфільтровані транзакції</value>
+  </data>
+  <data name="CommonError_OpenAddCategoryPage" xml:space="preserve">
+    <value>Не вдалося відкрити сторінку створення нової категорії</value>
+  </data>
+  <data name="CommonError_OpenEditTransactionPage" xml:space="preserve">
+    <value>Не вдалося відкрити сторінку редагування транзакції</value>
+  </data>
+  <data name="CommonError_InternalErrorTryAgain" xml:space="preserve">
+    <value>Сталася внутрішня помилка. Спробуйте знову</value>
+  </data>
+  <data name="CommonError_FindTransactionToDelete" xml:space="preserve">
+    <value>Не вдалося знайти транзакцію для видалення</value>
+  </data>
+  <data name="CommonError_PlannedAmountNumber" xml:space="preserve">
+    <value>Планована сума має бути числом</value>
+  </data>
+  <data name="CommonError_GetCurrentProfile" xml:space="preserve">
+    <value>Не вдалося отримати поточний профіль</value>
+  </data>
+  <data name="CommonError_GetSettings" xml:space="preserve">
+    <value>Не вдалося отримати налаштування</value>
+  </data>
+  <data name="CommonError_BalanceNumber" xml:space="preserve">
+    <value>Баланс повинен бути числом</value>
+  </data>
+  <data name="AddTransaction_NoneCategory" xml:space="preserve">
+    <value>Без категорії</value>
+  </data>
+  <data name="CommonError_AmountNumber" xml:space="preserve">
+    <value>Сума повинна бути числом</value>
+  </data>
+  <data name="CommonError_TransactionType" xml:space="preserve">
+    <value>Неправильний тип транзакції</value>
+  </data>
+  <data name="Pages_Language" xml:space="preserve">
+    <value>Мова</value>
+  </data>
+  <data name="Pages_Categories" xml:space="preserve">
+    <value>Категорії</value>
+  </data>
+  <data name="Pages_Theme" xml:space="preserve">
+    <value>Тема</value>
+  </data>
+  <data name="Home_Categories" xml:space="preserve">
+    <value>Витрати по категоріям</value>
+  </data>
+  <data name="AddTransaction_Main" xml:space="preserve">
+    <value>Основні</value>
+  </data>
+  <data name="AddTransaction_Secondary" xml:space="preserve">
+    <value>Другорядні</value>
+  </data>
+  <data name="AddTransaction_Saved" xml:space="preserve">
+    <value>Відкладені</value>
+  </data>
+  <data name="Transactions_Main" xml:space="preserve">
+    <value>Основні</value>
+  </data>
+  <data name="Transactions_Secondary" xml:space="preserve">
+    <value>Другорядні</value>
+  </data>
+  <data name="Transactions_Saved" xml:space="preserve">
+    <value>Відкладені</value>
+  </data>
+  <data name="Transactions_Income" xml:space="preserve">
+    <value>Дохід</value>
+  </data>
+  <data name="CommonError_FindTransactionToEdit" xml:space="preserve">
+    <value>Не вдалося знайти транзакцію для редагування</value>
+  </data>
+  <data name="InfoAlert_FeatureNotAvailable_Message" xml:space="preserve">
+    <value>Ця функція недоступна. Скоро ми її добавимо</value>
+  </data>
+  <data name="InfoAlert_FeatureNotAvailable_Title" xml:space="preserve">
+    <value>Поки недоступно</value>
+  </data>
+  <data name="InfoAlert_FeatureNotAvailable_Ok" xml:space="preserve">
+    <value>Зрозуміло</value>
+  </data>
+  <data name="CommonError_FindCategoryToDelete" xml:space="preserve">
+    <value>Не вдалося знайти категорію для видалення</value>
+  </data>
+  <data name="CommonError_FindCategoryToEdit" xml:space="preserve">
+    <value>Не вдалося знайти категорію для редагування</value>
+  </data>
+  <data name="Home_SavedAmounts" xml:space="preserve">
+    <value>Відкладені суми</value>
+  </data>
+  <data name="CommonError_OriginalCurrencyAmountNumber" xml:space="preserve">
+    <value>Сума у вихідній валюті має бути числом</value>
+  </data>
+  <data name="AddTransaction_MultiCurrencyTransaction" xml:space="preserve">
+    <value>Мультивалютна транзакція</value>
+  </data>
+  <data name="AddTransaction_OriginalCurrencyAmount" xml:space="preserve">
+    <value>Сума у вихідній валюті</value>
+  </data>
+  <data name="AddTransaction_WithdrawSavedFunds" xml:space="preserve">
+    <value>Вивести з відкладених коштів</value>
+  </data>
+  <data name="AddTransaction_WithdrawAmount" xml:space="preserve">
+    <value>Сума виводу</value>
+  </data>
+  <data name="Pages_Overview" xml:space="preserve">
+    <value>Зведено</value>
+  </data>
+  <data name="Overview_CategoriesExpenses" xml:space="preserve">
+    <value>Витрати по категоріям</value>
+  </data>
+  <data name="Overview_SpendingTypes" xml:space="preserve">
+    <value>Витрати по типам</value>
+  </data>
+  <data name="Overview_IncomeExpense" xml:space="preserve">
+    <value>Доходи та витрати</value>
+  </data>
+  <data name="Overview_CategoriesPlannedAndActual" xml:space="preserve">
+    <value>Очікувані та фактичні витрати по категоріям</value>
+  </data>
+  <data name="Overview_DailyExpenses" xml:space="preserve">
+    <value>Денні витрати</value>
+  </data>
+  <data name="Overview_WeeklyExpenses" xml:space="preserve">
+    <value>Тижневі витрати</value>
+  </data>
+  <data name="OverView_SpendingType_Main" xml:space="preserve">
+    <value>Основні</value>
+  </data>
+  <data name="Overview_SpendingType_Secondary" xml:space="preserve">
+    <value>Другорядні</value>
+  </data>
+  <data name="Overview_SpendingType_Saved" xml:space="preserve">
+    <value>Відкладені</value>
+  </data>
+  <data name="Overview_Income" xml:space="preserve">
+    <value>Дохід</value>
+  </data>
+  <data name="Overview_Expense" xml:space="preserve">
+    <value>Витрати</value>
+  </data>
+  <data name="Overview_ForMonth" xml:space="preserve">
+    <value>За поточний місяць</value>
+  </data>
+  <data name="Overview_ForThreeMonths" xml:space="preserve">
+    <value>За три місяці</value>
+  </data>
+  <data name="Overview_ForSixMonths" xml:space="preserve">
+    <value>За шість місяців</value>
+  </data>
+  <data name="Pages_Profiles" xml:space="preserve">
+    <value>Профілі</value>
+  </data>
+  <data name="CommonError_GetProfileById" xml:space="preserve">
+    <value>Не вдалося знайти профіль із зазначеним ID</value>
+  </data>
+  <data name="ProfileSettings_ChangeAlert_Title" xml:space="preserve">
+    <value>Зміна поточного профілю</value>
+  </data>
+  <data name="ProfileSettings_ChangeAlert_Desription" xml:space="preserve">
+    <value>Ви впевнені, що хочете зробити профіль "{0}" поточним?</value>
+  </data>
+  <data name="ProfileSettings_ChangeAlert_Ok" xml:space="preserve">
+    <value>Так</value>
+  </data>
+  <data name="ProfileSettings_ChangeAlert_Cancel" xml:space="preserve">
+    <value>Скасувати</value>
+  </data>
+  <data name="Currencies_USD" xml:space="preserve">
+    <value>Долар США</value>
+  </data>
+  <data name="Currencies_EUR" xml:space="preserve">
+    <value>Євро</value>
+  </data>
+  <data name="Currencies_GBP" xml:space="preserve">
+    <value>Британський фунт</value>
+  </data>
+  <data name="Currencies_JPY" xml:space="preserve">
+    <value>Японська єна</value>
+  </data>
+  <data name="Currencies_AUD" xml:space="preserve">
+    <value>Австралійський долар</value>
+  </data>
+  <data name="Currencies_CAD" xml:space="preserve">
+    <value>Канадський долар</value>
+  </data>
+  <data name="Currencies_CHF" xml:space="preserve">
+    <value>Швейцарський франк</value>
+  </data>
+  <data name="Currencies_CNY" xml:space="preserve">
+    <value>Китайський юань</value>
+  </data>
+  <data name="Currencies_INR" xml:space="preserve">
+    <value>Індійська рупія</value>
+  </data>
+  <data name="Currencies_UAH" xml:space="preserve">
+    <value>Українська гривня</value>
+  </data>
+  <data name="Currencies_RSD" xml:space="preserve">
+    <value>Сербський дінар</value>
+  </data>
+  <data name="Currencies_SEK" xml:space="preserve">
+    <value>Шведская крона</value>
+  </data>
+  <data name="Currencies_NOK" xml:space="preserve">
+    <value>Норвежська крона</value>
+  </data>
+  <data name="Currencies_DKK" xml:space="preserve">
+    <value>Датськая крона</value>
+  </data>
+  <data name="Currencies_HUF" xml:space="preserve">
+    <value>Венгерський форінт</value>
+  </data>
+  <data name="Currencies_PLN" xml:space="preserve">
+    <value>Польський злотий</value>
+  </data>
+  <data name="Currencies_BGN" xml:space="preserve">
+    <value>Болгарський лев</value>
+  </data>
+  <data name="Currencies_CZK" xml:space="preserve">
+    <value>Чешськая крона</value>
+  </data>
+  <data name="Currencies_RON" xml:space="preserve">
+    <value>Румунський лей</value>
+  </data>
+  <data name="Currencies_MXN" xml:space="preserve">
+    <value>Мексиаканський песо</value>
+  </data>
+  <data name="Currencies_BRL" xml:space="preserve">
+    <value>Бразильський реал</value>
+  </data>
+  <data name="Currencies_CLP" xml:space="preserve">
+    <value>Чилійський песо</value>
+  </data>
+  <data name="Currencies_ARS" xml:space="preserve">
+    <value>Аргентинський песо</value>
+  </data>
+  <data name="Currencies_COP" xml:space="preserve">
+    <value>Колумбійський песо</value>
+  </data>
+  <data name="Currencies_PYG" xml:space="preserve">
+    <value>Парагвайська гуарані</value>
+  </data>
+  <data name="Currencies_VEF" xml:space="preserve">
+    <value>Венесуельский болівар</value>
+  </data>
+  <data name="Currencies_KRW" xml:space="preserve">
+    <value>Піденнокорейська вона</value>
+  </data>
+  <data name="Currencies_THB" xml:space="preserve">
+    <value>Тайский бат</value>
+  </data>
+  <data name="Currencies_PHP" xml:space="preserve">
+    <value>Філіпінський песо</value>
+  </data>
+  <data name="Currencies_TWD" xml:space="preserve">
+    <value>Тайванський долар</value>
+  </data>
+  <data name="Currencies_HKD" xml:space="preserve">
+    <value>Гонконгський долар</value>
+  </data>
+  <data name="Currencies_IDR" xml:space="preserve">
+    <value>Індонезійська рупія</value>
+  </data>
+  <data name="Currencies_VND" xml:space="preserve">
+    <value>В'єнамский донг</value>
+  </data>
+  <data name="Currencies_MYR" xml:space="preserve">
+    <value>Малазійський ринггіт</value>
+  </data>
+  <data name="Currencies_SGD" xml:space="preserve">
+    <value>Сингапурский доллар</value>
+  </data>
+  <data name="Currencies_AED" xml:space="preserve">
+    <value>Дирхам ОАЭ</value>
+  </data>
+  <data name="Currencies_ILS" xml:space="preserve">
+    <value>Ізраїльський шекель</value>
+  </data>
+  <data name="Currencies_PKR" xml:space="preserve">
+    <value>Пакистанська рупія</value>
+  </data>
+  <data name="Currencies_BDT" xml:space="preserve">
+    <value>Бангладешська така</value>
+  </data>
+  <data name="Currencies_ZAR" xml:space="preserve">
+    <value>Південноафриканський ренд</value>
+  </data>
+  <data name="Currencies_EGP" xml:space="preserve">
+    <value>Єгипетський фунт</value>
+  </data>
+  <data name="Currencies_KES" xml:space="preserve">
+    <value>Кенійський шилінг</value>
+  </data>
+  <data name="Currencies_NGN" xml:space="preserve">
+    <value>Нігерійская найра</value>
+  </data>
+  <data name="Currencies_GHS" xml:space="preserve">
+    <value>Ганський седі</value>
+  </data>
+  <data name="Currencies_NZD" xml:space="preserve">
+    <value>Новозеландський долар</value>
+  </data>
+  <data name="Currencies_FJD" xml:space="preserve">
+    <value>Долар Фіджі</value>
+  </data>
+  <data name="Currencies_WST" xml:space="preserve">
+    <value>Самоанська тала</value>
+  </data>
+  <data name="Currencies_TRY" xml:space="preserve">
+    <value>Турецкая лира</value>
+  </data>
+  <data name="Currencies_IQD" xml:space="preserve">
+    <value>Іракський динар</value>
+  </data>
+  <data name="Currencies_OMR" xml:space="preserve">
+    <value>Оманський ріал</value>
+  </data>
+  <data name="Currencies_SAR" xml:space="preserve">
+    <value>Саудовский риял</value>
+  </data>
+  <data name="Currencies_KWD" xml:space="preserve">
+    <value>Кувейтський динар</value>
+  </data>
+  <data name="Currencies_BTC" xml:space="preserve">
+    <value>Біткоїн</value>
+  </data>
+  <data name="Currencies_ETH" xml:space="preserve">
+    <value>Ефір</value>
+  </data>
+  <data name="Settings_AboutApplication" xml:space="preserve">
+    <value>Про додаток</value>
+  </data>
+  <data name="Settings_Version" xml:space="preserve">
+    <value>Версія</value>
+  </data>
+  <data name="Settings_GitHub" xml:space="preserve">
+    <value>GitHub</value>
+  </data>
+  <data name="CategoriesSettings_DeleteAlert_Title" xml:space="preserve">
+    <value>Видалення категорії</value>
+  </data>
+  <data name="CategoriesSettings_DeleteAlert_Ok" xml:space="preserve">
+    <value>Так</value>
+  </data>
+  <data name="CategoriesSettings_DeleteAlert_Cancel" xml:space="preserve">
+    <value>Скасування</value>
+  </data>
+  <data name="CategoriesSettings_DeleteAlert_Description" xml:space="preserve">
+    <value>Ви впевнені, що хочете видалити категорію "{0}"?</value>
+  </data>
+  <data name="Transactions_DeleteAlert_Cancel" xml:space="preserve">
+    <value>Скасувати</value>
+  </data>
+  <data name="Transactions_DeleteAlert_Ok" xml:space="preserve">
+    <value>Так</value>
+  </data>
+  <data name="Transactions_DeleteAlert_Title" xml:space="preserve">
+    <value>Видалення транзакции</value>
+  </data>
+  <data name="Transactions_DeleteAlert_Description" xml:space="preserve">
+    <value>Ви впевнені, що хочете видалити транзакцію "{0}"?</value>
+  </data>
+  <data name="Transactions_EditNotInPeriodAlert_Cancel" xml:space="preserve">
+    <value>Скасувати</value>
+  </data>
+  <data name="Transactions_EditNotInPeriodAlert_Ok" xml:space="preserve">
+    <value>Так</value>
+  </data>
+  <data name="Transactions_EditNotInPeriodAlert_Description" xml:space="preserve">
+    <value>Ви впевнені, що хочете відредагувати транзакцію "{0}"? Вона не в поточному періоді профілю і не впливає на розрахунки профілю.</value>
+  </data>
+  <data name="Transactions_EditNotInPeriodAlert_Title" xml:space="preserve">
+    <value>Транзакція не в періоді профілю</value>
+  </data>
+  <data name="ProfileSettings_DeleteAlert_Cancel" xml:space="preserve">
+    <value>Скасувати</value>
+  </data>
+  <data name="ProfileSettings_DeleteAlert_Ok" xml:space="preserve">
+    <value>Так</value>
+  </data>
+  <data name="ProfileSettings_DeleteAlert_Description" xml:space="preserve">
+    <value>Ви впевнені, що хочете видалити профіль "{0}"? Усі транзакції та категорії цього профілю також буде видалено.</value>
+  </data>
+  <data name="ProfileSettings_DeleteAlert_Title" xml:space="preserve">
+    <value>Видалення профілю</value>
+  </data>
+  <data name="ProfileSettings_LastProfileErrorAlert_Title" xml:space="preserve">
+    <value>Останній профіль</value>
+  </data>
+  <data name="ProfileSettings_LastProfileErrorAlert_Description" xml:space="preserve">
+    <value>Профіль "{0}" є останнім профілем і не може бути видалений.</value>
+  </data>
+  <data name="ProfileSettings_LastProfileErrorAlert_Ok" xml:space="preserve">
+    <value>ОК</value>
+  </data>
+  <data name="Transactions_Filters" xml:space="preserve">
+    <value>Фільтри</value>
+  </data>
+  <data name="Pages_TransactionsFilters" xml:space="preserve">
+    <value>Фільтри транзакцій</value>
+  </data>
+  <data name="CommonError_OpenTransactionsFiltersPage" xml:space="preserve">
+    <value>Не вдалося відкрити сторінку фільтрів транзакцій</value>
+  </data>
+  <data name="TransactionsFilters_ApplyFilters" xml:space="preserve">
+    <value>Застосувати фільтри</value>
+  </data>
+  <data name="TransactionsFilters_StartDate" xml:space="preserve">
+    <value>Початкова дата</value>
+  </data>
+  <data name="TransactionsFilters_EndDate" xml:space="preserve">
+    <value>Кінцева дата</value>
+  </data>
+  <data name="TransactionsFilters_SpendingType" xml:space="preserve">
+    <value>Тип витрати</value>
+  </data>
+  <data name="TransactionsFilters_SearchByCurrency" xml:space="preserve">
+    <value>Пошук по валюті</value>
+  </data>
+  <data name="TransactionsFilters_TransactionType" xml:space="preserve">
+    <value>Тип транзакції</value>
+  </data>
+  <data name="TransactionsFilters_Category" xml:space="preserve">
+    <value>Категорія</value>
+  </data>
+  <data name="TransactionsFilters_Description" xml:space="preserve">
+    <value>Опис</value>
+  </data>
+  <data name="TransactionsFilters_SearchByAmount" xml:space="preserve">
+    <value>Пошук по сумі</value>
+  </data>
+  <data name="TransactionsFilters_LessThan" xml:space="preserve">
+    <value>Менше ніж</value>
+  </data>
+  <data name="TransactionsFilters_GreaterThan" xml:space="preserve">
+    <value>Більше ніж</value>
+  </data>
+  <data name="TransactionsFilters_AmountToSearch" xml:space="preserve">
+    <value>Сума</value>
+  </data>
+  <data name="TransactionsFilters_Currency" xml:space="preserve">
+    <value>Валюта</value>
+  </data>
+  <data name="TransactionsFilters_Pickers_Any" xml:space="preserve">
+    <value>Не важливо</value>
+  </data>
+  <data name="TransactionsFilters_ResetFilters" xml:space="preserve">
+    <value>Скинути фільтри</value>
+  </data>
+  <data name="Transactions_Expense" xml:space="preserve">
+    <value>Витрати</value>
+  </data>
+  <data name="Languages_French" xml:space="preserve">
+    <value>Français</value>
+  </data>
+  <data name="Languages_Spanish" xml:space="preserve">
+    <value>Español</value>
+  </data>
+  <data name="Languages_SerbianCyrillic" xml:space="preserve">
+    <value>Српски (ћирилица)</value>
+  </data>
+  <data name="Languages_SerbianLatin" xml:space="preserve">
+    <value>Srpski (latinica)</value>
+  </data>
+  <data name="Transactions_NoTransactions" xml:space="preserve">
+    <value>За вказаними фільтрами не було знайдено жодної транзакції</value>
+  </data>
+</root>

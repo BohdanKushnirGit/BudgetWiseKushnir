@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="EditProfile_Profile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="Pages_Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Home_Balance" xml:space="preserve">
+    <value>Balance</value>
+  </data>
+  <data name="Home_DailyAmounts" xml:space="preserve">
+    <value>Daily amounts</value>
+  </data>
+  <data name="Home_TomorrowBalance" xml:space="preserve">
+    <value>Tomorrow</value>
+  </data>
+  <data name="Home_TodayBalance" xml:space="preserve">
+    <value>Today</value>
+  </data>
+  <data name="Home_SpendingTypes" xml:space="preserve">
+    <value>Spending types</value>
+  </data>
+  <data name="Home_Main" xml:space="preserve">
+    <value>Main</value>
+  </data>
+  <data name="Home_Secondary" xml:space="preserve">
+    <value>Secondary</value>
+  </data>
+  <data name="Home_Saved" xml:space="preserve">
+    <value>Saved</value>
+  </data>
+  <data name="Settings_Categories" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+  <data name="Home_NoCategories" xml:space="preserve">
+    <value>There is no categories</value>
+  </data>
+  <data name="EditProfile_ProfileName" xml:space="preserve">
+    <value>Profile name</value>
+  </data>
+  <data name="EditProfile_InitialBalance" xml:space="preserve">
+    <value>Initial balance</value>
+  </data>
+  <data name="EditProfile_SaveProfile" xml:space="preserve">
+    <value>Save profile</value>
+  </data>
+  <data name="Pages_Transactions" xml:space="preserve">
+    <value>Transactions</value>
+  </data>
+  <data name="AddTransaction_Income" xml:space="preserve">
+    <value>Income</value>
+  </data>
+  <data name="Pages_Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Pages_NewTransaction" xml:space="preserve">
+    <value>Transaction</value>
+  </data>
+  <data name="AddTransaction_Expense" xml:space="preserve">
+    <value>Expense</value>
+  </data>
+  <data name="AddTransaction_Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="AddTransaction_Amount" xml:space="preserve">
+    <value>Amount in main currency</value>
+  </data>
+  <data name="AddTransaction_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="AddTransaction_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="AddTransaction_SaveTransaction" xml:space="preserve">
+    <value>Save transaction</value>
+  </data>
+  <data name="Settings_Application" xml:space="preserve">
+    <value>Application</value>
+  </data>
+  <data name="Settings_General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="Settings_Profiles" xml:space="preserve">
+    <value>Profiles</value>
+  </data>
+  <data name="Settings_Theme" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="Settings_Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Categories_NoLimits" xml:space="preserve">
+    <value>No limits</value>
+  </data>
+  <data name="Pages_NewCategory" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="AddCategory_CategoryName" xml:space="preserve">
+    <value>Category name</value>
+  </data>
+  <data name="AddCategory_SpecifyPlannedAmount" xml:space="preserve">
+    <value>Specify planned amount</value>
+  </data>
+  <data name="AddCategory_PlannedAmount" xml:space="preserve">
+    <value>Planned amount</value>
+  </data>
+  <data name="AddCategory_SaveCategory" xml:space="preserve">
+    <value>Save category</value>
+  </data>
+  <data name="ThemeSettings_LightTheme" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="ThemeSettings_Dark" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="ThemeSettings_System" xml:space="preserve">
+    <value>System</value>
+  </data>
+  <data name="Languages_English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Languages_Ukrainian" xml:space="preserve">
+    <value>Українська</value>
+  </data>
+  <data name="InfoAlert_ChangeLanguage_Title" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="InfoAlert_ChangeLanguage_Message" xml:space="preserve">
+    <value>To make the changes take effect, you need to restart the application.</value>
+  </data>
+  <data name="InfoAlert_ChangeLanguage_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ErrorAlert_Title" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="ErrorAlert_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ErrorAlert_Description" xml:space="preserve">
+    <value>An error occurred</value>
+  </data>
+  <data name="CommonError_GetCategoryInfo" xml:space="preserve">
+    <value>Cannot get category info</value>
+  </data>
+  <data name="CommonError_ShowFilteredTransactions" xml:space="preserve">
+    <value>Cannot show filtered transactions</value>
+  </data>
+  <data name="CommonError_OpenAddCategoryPage" xml:space="preserve">
+    <value>Cannot open category adding page</value>
+  </data>
+  <data name="CommonError_OpenEditTransactionPage" xml:space="preserve">
+    <value>Cannot open transaction edit page</value>
+  </data>
+  <data name="CommonError_InternalErrorTryAgain" xml:space="preserve">
+    <value>An internal error occurred. Try again</value>
+  </data>
+  <data name="CommonError_FindTransactionToDelete" xml:space="preserve">
+    <value>Cannot find transaction to delete</value>
+  </data>
+  <data name="CommonError_PlannedAmountNumber" xml:space="preserve">
+    <value>Planned amount must be a number</value>
+  </data>
+  <data name="CommonError_GetCurrentProfile" xml:space="preserve">
+    <value>Cannot get current profile</value>
+  </data>
+  <data name="CommonError_GetSettings" xml:space="preserve">
+    <value>Cannot find settings</value>
+  </data>
+  <data name="CommonError_BalanceNumber" xml:space="preserve">
+    <value>Balance must be a number</value>
+  </data>
+  <data name="AddTransaction_NoneCategory" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="CommonError_AmountNumber" xml:space="preserve">
+    <value>Amount must be a number</value>
+  </data>
+  <data name="CommonError_TransactionType" xml:space="preserve">
+    <value>Invalid transaction type</value>
+  </data>
+  <data name="Pages_Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Pages_Categories" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+  <data name="Pages_Theme" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="Home_Categories" xml:space="preserve">
+    <value>Categories expenses</value>
+  </data>
+  <data name="AddTransaction_Main" xml:space="preserve">
+    <value>Main</value>
+  </data>
+  <data name="AddTransaction_Secondary" xml:space="preserve">
+    <value>Secondary</value>
+  </data>
+  <data name="AddTransaction_Saved" xml:space="preserve">
+    <value>Saved</value>
+  </data>
+  <data name="Transactions_Main" xml:space="preserve">
+    <value>Main</value>
+  </data>
+  <data name="Transactions_Secondary" xml:space="preserve">
+    <value>Secondary</value>
+  </data>
+  <data name="Transactions_Saved" xml:space="preserve">
+    <value>Saved</value>
+  </data>
+  <data name="Transactions_Income" xml:space="preserve">
+    <value>Income</value>
+  </data>
+  <data name="CommonError_FindTransactionToEdit" xml:space="preserve">
+    <value>Cannot find transaction to edit</value>
+  </data>
+  <data name="InfoAlert_FeatureNotAvailable_Message" xml:space="preserve">
+    <value>This feature is not available yet. We will implement it soon</value>
+  </data>
+  <data name="InfoAlert_FeatureNotAvailable_Title" xml:space="preserve">
+    <value>Not Available Yet</value>
+  </data>
+  <data name="InfoAlert_FeatureNotAvailable_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="CommonError_FindCategoryToDelete" xml:space="preserve">
+    <value>Cannot find category to delete</value>
+  </data>
+  <data name="CommonError_FindCategoryToEdit" xml:space="preserve">
+    <value>Cannot find category to edit</value>
+  </data>
+  <data name="Home_SavedAmounts" xml:space="preserve">
+    <value>Saved Amounts</value>
+  </data>
+  <data name="CommonError_OriginalCurrencyAmountNumber" xml:space="preserve">
+    <value>Amount in original currency must be a number</value>
+  </data>
+  <data name="AddTransaction_MultiCurrencyTransaction" xml:space="preserve">
+    <value>Multicurrency Transaction</value>
+  </data>
+  <data name="AddTransaction_OriginalCurrencyAmount" xml:space="preserve">
+    <value>Amount in the original currency</value>
+  </data>
+  <data name="AddTransaction_WithdrawSavedFunds" xml:space="preserve">
+    <value>Withdraw from Saved Funds</value>
+  </data>
+  <data name="AddTransaction_WithdrawAmount" xml:space="preserve">
+    <value>Amount to withdraw</value>
+  </data>
+  <data name="Pages_Overview" xml:space="preserve">
+    <value>Overview</value>
+  </data>
+  <data name="Overview_CategoriesExpenses" xml:space="preserve">
+    <value>Expenses by Category</value>
+  </data>
+  <data name="Overview_SpendingTypes" xml:space="preserve">
+    <value>Spending Types Expenses</value>
+  </data>
+  <data name="Overview_IncomeExpense" xml:space="preserve">
+    <value>Income and Expenses</value>
+  </data>
+  <data name="Overview_CategoriesPlannedAndActual" xml:space="preserve">
+    <value>Planned and Actual Expenses by Category</value>
+  </data>
+  <data name="Overview_DailyExpenses" xml:space="preserve">
+    <value>Daily expenses</value>
+  </data>
+  <data name="Overview_WeeklyExpenses" xml:space="preserve">
+    <value>Weekly Expenses</value>
+  </data>
+  <data name="OverView_SpendingType_Main" xml:space="preserve">
+    <value>Main</value>
+  </data>
+  <data name="Overview_SpendingType_Secondary" xml:space="preserve">
+    <value>Secondary</value>
+  </data>
+  <data name="Overview_SpendingType_Saved" xml:space="preserve">
+    <value>Saved</value>
+  </data>
+  <data name="Overview_Income" xml:space="preserve">
+    <value>Income</value>
+  </data>
+  <data name="Overview_Expense" xml:space="preserve">
+    <value>Expense</value>
+  </data>
+  <data name="Overview_ForMonth" xml:space="preserve">
+    <value>For the current month</value>
+  </data>
+  <data name="Overview_ForThreeMonths" xml:space="preserve">
+    <value>For three months</value>
+  </data>
+  <data name="Overview_ForSixMonths" xml:space="preserve">
+    <value>For six months</value>
+  </data>
+  <data name="Pages_Profiles" xml:space="preserve">
+    <value>Profiles</value>
+  </data>
+  <data name="CommonError_GetProfileById" xml:space="preserve">
+    <value>Cannot find profile with specified ID</value>
+  </data>
+  <data name="ProfileSettings_ChangeAlert_Title" xml:space="preserve">
+    <value>Change Current Profile</value>
+  </data>
+  <data name="ProfileSettings_ChangeAlert_Desription" xml:space="preserve">
+    <value>Are you sure you want to set profile "{0}" current?</value>
+  </data>
+  <data name="ProfileSettings_ChangeAlert_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ProfileSettings_ChangeAlert_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Currencies_USD" xml:space="preserve">
+    <value>United States Dollar</value>
+  </data>
+  <data name="Currencies_EUR" xml:space="preserve">
+    <value>Euro</value>
+  </data>
+  <data name="Currencies_GBP" xml:space="preserve">
+    <value>British Pound</value>
+  </data>
+  <data name="Currencies_JPY" xml:space="preserve">
+    <value>Japanese Yen</value>
+  </data>
+  <data name="Currencies_AUD" xml:space="preserve">
+    <value>Australian Dollar</value>
+  </data>
+  <data name="Currencies_CAD" xml:space="preserve">
+    <value>Canadian Dollar</value>
+  </data>
+  <data name="Currencies_CHF" xml:space="preserve">
+    <value>Swiss Franc</value>
+  </data>
+  <data name="Currencies_CNY" xml:space="preserve">
+    <value>Chinese Yuan</value>
+  </data>
+  <data name="Currencies_INR" xml:space="preserve">
+    <value>Indian Rupee</value>
+  </data>
+  <data name="Currencies_UAH" xml:space="preserve">
+    <value>Ukrainian Hryvna</value>
+  </data>
+  <data name="Currencies_RSD" xml:space="preserve">
+    <value>Serbian Dinar</value>
+  </data>
+  <data name="Currencies_SEK" xml:space="preserve">
+    <value>Swedish Krona</value>
+  </data>
+  <data name="Currencies_NOK" xml:space="preserve">
+    <value>Norwegian Krone</value>
+  </data>
+  <data name="Currencies_DKK" xml:space="preserve">
+    <value>Danish Krone</value>
+  </data>
+  <data name="Currencies_HUF" xml:space="preserve">
+    <value>Hungarian Forint</value>
+  </data>
+  <data name="Currencies_PLN" xml:space="preserve">
+    <value>Polish Zloty</value>
+  </data>
+  <data name="Currencies_BGN" xml:space="preserve">
+    <value>Bulgarian Lev</value>
+  </data>
+  <data name="Currencies_CZK" xml:space="preserve">
+    <value>Czech Koruna</value>
+  </data>
+  <data name="Currencies_RON" xml:space="preserve">
+    <value>Romanian Leu</value>
+  </data>
+  <data name="Currencies_MXN" xml:space="preserve">
+    <value>Mexican Peso</value>
+  </data>
+  <data name="Currencies_BRL" xml:space="preserve">
+    <value>Brazilian Real</value>
+  </data>
+  <data name="Currencies_CLP" xml:space="preserve">
+    <value>Chilean Peso</value>
+  </data>
+  <data name="Currencies_ARS" xml:space="preserve">
+    <value>Argentine Peso</value>
+  </data>
+  <data name="Currencies_COP" xml:space="preserve">
+    <value>Colombian Peso</value>
+  </data>
+  <data name="Currencies_PYG" xml:space="preserve">
+    <value>Paraguayan Guarani</value>
+  </data>
+  <data name="Currencies_VEF" xml:space="preserve">
+    <value>Venezuelan Bolívar</value>
+  </data>
+  <data name="Currencies_KRW" xml:space="preserve">
+    <value>South Korean Won</value>
+  </data>
+  <data name="Currencies_THB" xml:space="preserve">
+    <value>Thai Baht</value>
+  </data>
+  <data name="Currencies_PHP" xml:space="preserve">
+    <value>Philippine Peso</value>
+  </data>
+  <data name="Currencies_TWD" xml:space="preserve">
+    <value>Taiwan Dollar</value>
+  </data>
+  <data name="Currencies_HKD" xml:space="preserve">
+    <value>Hong Kong Dollar</value>
+  </data>
+  <data name="Currencies_IDR" xml:space="preserve">
+    <value>Indonesian Rupiah</value>
+  </data>
+  <data name="Currencies_VND" xml:space="preserve">
+    <value>Vietnamese Dong</value>
+  </data>
+  <data name="Currencies_MYR" xml:space="preserve">
+    <value>Malaysian Ringgit</value>
+  </data>
+  <data name="Currencies_SGD" xml:space="preserve">
+    <value>Singapore Dollar</value>
+  </data>
+  <data name="Currencies_AED" xml:space="preserve">
+    <value>UAE Dirham</value>
+  </data>
+  <data name="Currencies_ILS" xml:space="preserve">
+    <value>Israeli New Shekel</value>
+  </data>
+  <data name="Currencies_PKR" xml:space="preserve">
+    <value>Pakistani Rupee</value>
+  </data>
+  <data name="Currencies_BDT" xml:space="preserve">
+    <value>Bangladeshi Taka</value>
+  </data>
+  <data name="Currencies_ZAR" xml:space="preserve">
+    <value>South African Rand</value>
+  </data>
+  <data name="Currencies_EGP" xml:space="preserve">
+    <value>Egyptian Pound</value>
+  </data>
+  <data name="Currencies_KES" xml:space="preserve">
+    <value>Kenyan Shilling</value>
+  </data>
+  <data name="Currencies_NGN" xml:space="preserve">
+    <value>Nigerian Naira</value>
+  </data>
+  <data name="Currencies_GHS" xml:space="preserve">
+    <value>Ghanaian Cedi</value>
+  </data>
+  <data name="Currencies_NZD" xml:space="preserve">
+    <value>New Zealand Dollar</value>
+  </data>
+  <data name="Currencies_FJD" xml:space="preserve">
+    <value>Fiji Dollar</value>
+  </data>
+  <data name="Currencies_WST" xml:space="preserve">
+    <value>Samoan Tala</value>
+  </data>
+  <data name="Currencies_TRY" xml:space="preserve">
+    <value>Turkish Lira</value>
+  </data>
+  <data name="Currencies_IQD" xml:space="preserve">
+    <value>Iraqi Dinar</value>
+  </data>
+  <data name="Currencies_OMR" xml:space="preserve">
+    <value>Omani Rial</value>
+  </data>
+  <data name="Currencies_SAR" xml:space="preserve">
+    <value>Saudi Riyal</value>
+  </data>
+  <data name="Currencies_KWD" xml:space="preserve">
+    <value>Kuwaiti Dinar</value>
+  </data>
+  <data name="Currencies_BTC" xml:space="preserve">
+    <value>Bitcoin</value>
+  </data>
+  <data name="Currencies_ETH" xml:space="preserve">
+    <value>Ether</value>
+  </data>
+  <data name="Settings_AboutApplication" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Settings_Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="Settings_GitHub" xml:space="preserve">
+    <value>GitHub</value>
+  </data>
+  <data name="CategoriesSettings_DeleteAlert_Title" xml:space="preserve">
+    <value>Delete Category</value>
+  </data>
+  <data name="CategoriesSettings_DeleteAlert_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="CategoriesSettings_DeleteAlert_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="CategoriesSettings_DeleteAlert_Description" xml:space="preserve">
+    <value>Are you sure you want to delete category "{0}"?</value>
+  </data>
+  <data name="Transactions_DeleteAlert_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Transactions_DeleteAlert_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Transactions_DeleteAlert_Title" xml:space="preserve">
+    <value>Delete Transaction</value>
+  </data>
+  <data name="Transactions_DeleteAlert_Description" xml:space="preserve">
+    <value>Are you sure you want to delete transaction "{0}"?</value>
+  </data>
+  <data name="Transactions_EditNotInPeriodAlert_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Transactions_EditNotInPeriodAlert_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Transactions_EditNotInPeriodAlert_Description" xml:space="preserve">
+    <value>Are you sure you want to edit transaction "{0}"? It is not in the current profile period and does not affect on profile calculation.</value>
+  </data>
+  <data name="Transactions_EditNotInPeriodAlert_Title" xml:space="preserve">
+    <value>Transaction is not in Profile Period</value>
+  </data>
+  <data name="ProfileSettings_DeleteAlert_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ProfileSettings_DeleteAlert_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="ProfileSettings_DeleteAlert_Description" xml:space="preserve">
+    <value>Are you sure you want to delete profile "{0}"? All the profile's categories and transactions will be deleted too.</value>
+  </data>
+  <data name="ProfileSettings_DeleteAlert_Title" xml:space="preserve">
+    <value>Delete Profile</value>
+  </data>
+  <data name="ProfileSettings_LastProfileErrorAlert_Title" xml:space="preserve">
+    <value>Last Profile</value>
+  </data>
+  <data name="ProfileSettings_LastProfileErrorAlert_Description" xml:space="preserve">
+    <value>Profile "{0}" is the last profile and you cannot delete it.</value>
+  </data>
+  <data name="ProfileSettings_LastProfileErrorAlert_Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Transactions_Filters" xml:space="preserve">
+    <value>Filters</value>
+  </data>
+  <data name="Pages_TransactionsFilters" xml:space="preserve">
+    <value>Transactions Filters</value>
+  </data>
+  <data name="CommonError_OpenTransactionsFiltersPage" xml:space="preserve">
+    <value>Cannot open transactions filters page</value>
+  </data>
+  <data name="TransactionsFilters_ApplyFilters" xml:space="preserve">
+    <value>Apply Filters</value>
+  </data>
+  <data name="TransactionsFilters_StartDate" xml:space="preserve">
+    <value>Date from</value>
+  </data>
+  <data name="TransactionsFilters_EndDate" xml:space="preserve">
+    <value>Date to</value>
+  </data>
+  <data name="TransactionsFilters_SpendingType" xml:space="preserve">
+    <value>Spending type</value>
+  </data>
+  <data name="TransactionsFilters_SearchByCurrency" xml:space="preserve">
+    <value>Search by currency</value>
+  </data>
+  <data name="TransactionsFilters_TransactionType" xml:space="preserve">
+    <value>Transaction type</value>
+  </data>
+  <data name="TransactionsFilters_Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="TransactionsFilters_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="TransactionsFilters_SearchByAmount" xml:space="preserve">
+    <value>Search by amount</value>
+  </data>
+  <data name="TransactionsFilters_LessThan" xml:space="preserve">
+    <value>Less than</value>
+  </data>
+  <data name="TransactionsFilters_GreaterThan" xml:space="preserve">
+    <value>Greater than</value>
+  </data>
+  <data name="TransactionsFilters_AmountToSearch" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="TransactionsFilters_Currency" xml:space="preserve">
+    <value>Currency</value>
+  </data>
+  <data name="TransactionsFilters_Pickers_Any" xml:space="preserve">
+    <value>Any</value>
+  </data>
+  <data name="TransactionsFilters_ResetFilters" xml:space="preserve">
+    <value>Reset filters</value>
+  </data>
+  <data name="Transactions_Expense" xml:space="preserve">
+    <value>Expense</value>
+  </data>
+  <data name="Languages_French" xml:space="preserve">
+    <value>Français</value>
+    <comment>Français</comment>
+  </data>
+  <data name="Languages_Spanish" xml:space="preserve">
+    <value>Español</value>
+  </data>
+  <data name="Languages_SerbianCyrillic" xml:space="preserve">
+    <value>Српски (ћирилица)</value>
+  </data>
+  <data name="Languages_SerbianLatin" xml:space="preserve">
+    <value>Srpski (latinica)</value>
+  </data>
+  <data name="Transactions_NoTransactions" xml:space="preserve">
+    <value>No transactions were found for the specified filters</value>
+  </data>
+</root>

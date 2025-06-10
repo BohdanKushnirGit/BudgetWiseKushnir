@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<abstractions:BaseContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                              xmlns:resx="clr-namespace:BudgetWise.Mobile.Resources.Strings"
+                              xmlns:abstractions="clr-namespace:BudgetWise.Mobile.Abstractions"
+                              xmlns:viewmodel="clr-namespace:BudgetWise.Mobile.ViewModels.Profiles"
+                              xmlns:profiles="clr-namespace:BudgetWise.Mobile.Models.Profiles"
+                              xmlns:sharedcontrols="clr-namespace:BudgetWise.Mobile.Views.Shared.Controls"
+                              x:Class="BudgetWise.Mobile.Views.Settings.Pages.ProfilesSettingsPage"
+                              x:DataType="viewmodel:ProfileSettingsPageViewModel"
+                              Title="{x:Static resx:AppResources.Pages_Profiles}"
+                              BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
+                              NavigatedTo="UpdateProfilesList"
+                              HideSoftInputOnTapped="True">
+    <abstractions:BaseContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <CollectionView Grid.Row="0"
+                            x:Name="ProfilesCollectionView"
+                            VerticalScrollBarVisibility="Never">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="profiles:ProfileModel">
+                        <SwipeView>
+                            <SwipeView.RightItems>
+                                <SwipeItems>
+                                    <SwipeItemView Padding="4,0,8,0"
+                                                   BackgroundColor="Transparent"
+                                                   Invoked="DeleteProfile_OnInvoked">
+                                        <VerticalStackLayout VerticalOptions="Center" 
+                                                             Width="16">
+                                            <Border BackgroundColor="{StaticResource DangerRed}"
+                                                    StrokeThickness="0"
+                                                    Padding="16">
+                                                <Border.StrokeShape>
+                                                    <RoundRectangle CornerRadius="40"/>
+                                                </Border.StrokeShape>
+                                                <Image Source="bin.png" 
+                                                       Width="8"/>
+                                            </Border>
+                                        </VerticalStackLayout>
+                                    </SwipeItemView>
+                                    <SwipeItemView Padding="8,0,4,0"
+                                                   BackgroundColor="Transparent"
+                                                   Invoked="EditProfile_OnInvoked">
+                                        <VerticalStackLayout VerticalOptions="Center" 
+                                                             Width="16">
+                                            <Border BackgroundColor="{StaticResource InfoBlue}"
+                                                    StrokeThickness="0"
+                                                    Padding="16">
+                                                <Border.StrokeShape>
+                                                    <RoundRectangle CornerRadius="40"/>
+                                                </Border.StrokeShape>
+                                                <Image Source="edit.png" 
+                                                       Width="8"/>
+                                            </Border>
+                                        </VerticalStackLayout>
+                                    </SwipeItemView>
+                                </SwipeItems>
+                            </SwipeView.RightItems>
+                            
+                            <StackLayout Margin="8,8,8,0">
+                                <Border Style="{StaticResource CurrentProfileCard}"
+                                        IsVisible="{Binding IsCurrent}">
+                                    <StackLayout>
+                                        <FlexLayout JustifyContent="SpaceBetween">
+                                            <Label Style="{StaticResource CurrentProfileCardName}"
+                                                   Text="{Binding Name}"/>
+                                            <Label Style="{StaticResource CurrentProfileCardName}"
+                                                   Text="{Binding CurrencySymbol}"/>
+                                        </FlexLayout>
+                                    </StackLayout>
+                                </Border> 
+                                <Border Style="{StaticResource ProfileCard}"
+                                        IsVisible="{Binding IsNotCurrent}">
+                                    <Border.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="ProfileCard_OnTapped"/>
+                                    </Border.GestureRecognizers>
+                                    <StackLayout>
+                                        <FlexLayout JustifyContent="SpaceBetween">
+                                            <Label Style="{StaticResource CategoryCardName}"
+                                                   Text="{Binding Name}"/>
+                                            <Label Style="{StaticResource CategoryCardPlannedAmount}"
+                                                   Text="{Binding CurrencySymbol}"/>
+                                        </FlexLayout>
+                                    </StackLayout>
+                                </Border>
+                            </StackLayout>
+                        </SwipeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                <CollectionView.Footer>
+                    <Grid HeightRequest="92" 
+                          BackgroundColor="Transparent"/>
+                </CollectionView.Footer>
+            </CollectionView>
+            
+            <sharedcontrols:AddNewButton Grid.Row="0"
+                                         HorizontalOptions="End"
+                                         VerticalOptions="End"
+                                         Margin="0,0,16,16"
+                                         Clicked="AddProfileButton_OnClicked"/>
+        </Grid>
+    </abstractions:BaseContentPage.Content>
+</abstractions:BaseContentPage>

@@ -1,0 +1,108 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net9.0-android;net9.0-ios;</TargetFrameworks>
+        <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">12.2</SupportedOSPlatformVersion>
+        <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+
+        <OutputType>Exe</OutputType>
+        <RootNamespace>BudgetWise.Mobile</RootNamespace>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <SingleProject>true</SingleProject>
+        <Nullable>enable</Nullable>
+        <UseMaui>true</UseMaui>
+
+        <ApplicationTitle>BudgetWise</ApplicationTitle>
+        <ApplicationId>com.kushnir.budgetwise</ApplicationId>
+        
+        <ApplicationVersion>34</ApplicationVersion>
+        <ApplicationDisplayVersion>1.9.2</ApplicationDisplayVersion>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="$(TargetFramework.Contains('-ios'))">
+        <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\BudgetWise.Core\BudgetWise.Core.csproj" />
+        <ProjectReference Include="..\BudgetWise.Infrastructure\BudgetWise.Infrastructure.csproj" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+        <PackageReference Include="LiveChartsCore.SkiaSharpView.Maui" Version="2.0.0-rc5.4" />
+        <PackageReference Include="Microsoft.Maui.Controls" Version="9.0.40" />
+        <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="9.0.40" />
+        
+        <!-- Development dependencies -->
+        <PackageReference Condition="'$(Configuration)' != 'Release'" Include="Microsoft.Extensions.Logging.Debug" Version="9.0.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <MauiIcon Include="Resources\AppIcon\appicon.svg" BaseSize="128,128" Resize="false" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#ffffff" />
+        <MauiSplashScreen Include="Resources\Splash\splash.svg" BaseSize="500,575" Resize="false" Color="#ffffff" />
+        <MauiImage Include="Resources\Images\*" />
+        <MauiFont Include="Resources\Fonts\*" />
+        <MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <!-- Used by tab bar -->
+        <MauiImage Update="Resources\Images\home.png" BaseSize="24,24" />
+        <MauiImage Update="Resources\Images\transactions.png" BaseSize="24,24" />
+        <MauiImage Update="Resources\Images\settings.png" BaseSize="24,24" />
+        <MauiImage Update="Resources\Images\chart.png" BaseSize="24,24" />
+
+        <!-- Used by the rest of the application -->
+        <MauiImage Update="Resources\Images\bin.png" BaseSize="20,20" />
+        <MauiImage Update="Resources\Images\edit.png" BaseSize="20,20" />
+        <MauiImage Update="Resources\Images\currencies.png" BaseSize="20,20" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Update="Resources\Strings\AppResources.resx">
+            <Generator>ResXFileCodeGenerator</Generator>
+            <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
+            <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Resources\Strings\AppResources.es.resx">
+            <Generator>ResXFileCodeGenerator</Generator>
+            <LastGenOutput>AppResources.es.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Resources\Strings\AppResources.fr.resx">
+            <Generator>ResXFileCodeGenerator</Generator>
+            <LastGenOutput>AppResources.fr.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Resources\Strings\AppResources.uk.resx">
+            <Generator>ResXFileCodeGenerator</Generator>
+            <LastGenOutput>AppResources.ru.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Resources\Strings\AppResources.sr.resx">
+            <Generator>ResXFileCodeGenerator</Generator>
+            <LastGenOutput>AppResources.sr.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Resources\Strings\AppResources.sr-Latn.resx">
+            <Generator>ResXFileCodeGenerator</Generator>
+            <LastGenOutput>AppResources.sr-Latn.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Update="Resources\Strings\AppResources.Designer.cs">
+          <DesignTime>True</DesignTime>
+          <AutoGen>True</AutoGen>
+          <DependentUpon>AppResources.resx</DependentUpon>
+        </Compile>
+        <Compile Update="Resources\Strings\AppResources.es.Designer.cs">
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>AppResources.es.resx</DependentUpon>
+        </Compile>
+        <Compile Update="Resources\Strings\AppResources.fr.Designer.cs">
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>AppResources.fr.resx</DependentUpon>
+        </Compile>
+    </ItemGroup>
+
+</Project>

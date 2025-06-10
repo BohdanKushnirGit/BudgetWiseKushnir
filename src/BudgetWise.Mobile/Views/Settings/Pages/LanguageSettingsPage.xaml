@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<abstractions:BaseContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                              xmlns:resx="clr-namespace:BudgetWise.Mobile.Resources.Strings"
+                              xmlns:abstractions="clr-namespace:BudgetWise.Mobile.Abstractions"
+                              xmlns:viewmodel="clr-namespace:BudgetWise.Mobile.ViewModels.Settings"
+                              x:Class="BudgetWise.Mobile.Views.Settings.Pages.LanguageSettingsPage"
+                              x:DataType="viewmodel:LanguageSettingsViewModel"
+                              Title="{x:Static resx:AppResources.Pages_Language}"
+                              Loaded="LanguageSettingsPage_OnLoaded"
+                              BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
+                              HideSoftInputOnTapped="True">
+    <abstractions:BaseContentPage.Content>
+        <ScrollView Padding="16,8,16,16"
+                VerticalScrollBarVisibility="Never">
+            <StackLayout>
+                <CollectionView ItemsSource="{Binding AvailableLanguages}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="viewmodel:LanguageOption">
+                            <Grid>
+                                <Border Style="{StaticResource ThemeSettingsButton}"
+                                        Margin ="0,8,0,0">
+                                    <Border.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:LanguageSettingsViewModel}}, Path=SelectLanguageCommand}"
+                                                              CommandParameter="{Binding Code}"/>
+                                    </Border.GestureRecognizers>
+                                    <Border.Triggers>
+                                        <DataTrigger TargetType="Border"
+                                                    Binding="{Binding IsSelected}"
+                                                    Value="True">
+                                            <Setter Property="Style" Value="{StaticResource ThemeSettingsButtonActive}"/>
+                                        </DataTrigger>
+                                        <DataTrigger TargetType="Border"
+                                                    Binding="{Binding IsSelected}"
+                                                    Value="False">
+                                            <Setter Property="Style" Value="{StaticResource ThemeSettingsButton}"/>
+                                        </DataTrigger>
+                                    </Border.Triggers>
+                                    <FlexLayout JustifyContent="SpaceBetween">
+                                        <Label Style="{StaticResource SettingsButtonText}"
+                                            Text="{Binding DisplayName}" 
+                                            VerticalOptions="Center">
+                                            <Label.Triggers>
+                                                <DataTrigger TargetType="Label"
+                                                            Binding="{Binding IsSelected}"
+                                                            Value="True">
+                                                    <Setter Property="TextColor" Value="{StaticResource DarkPrimaryText}"/>
+                                                </DataTrigger>
+                                                <DataTrigger TargetType="Label"
+                                                            Binding="{Binding IsSelected}"
+                                                            Value="False">
+                                                    <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource LightPrimaryText}, Dark={StaticResource DarkPrimaryText}}"/>
+                                                </DataTrigger>
+                                            </Label.Triggers>   
+                                        </Label>
+                                    </FlexLayout>
+                                </Border>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </ScrollView>
+    </abstractions:BaseContentPage.Content>
+</abstractions:BaseContentPage>

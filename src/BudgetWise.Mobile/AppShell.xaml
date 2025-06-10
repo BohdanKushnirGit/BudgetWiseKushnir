@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:resx="clr-namespace:BudgetWise.Mobile.Resources.Strings"
+       xmlns:homepages="clr-namespace:BudgetWise.Mobile.Views.Home.Pages"
+       xmlns:transactionpages="clr-namespace:BudgetWise.Mobile.Views.Transactions.Pages"
+       xmlns:overviewpages="clr-namespace:BudgetWise.Mobile.Views.Overview.Pages"
+       xmlns:settingspages="clr-namespace:BudgetWise.Mobile.Views.Settings.Pages"
+       x:Class="BudgetWise.Mobile.AppShell"
+       Loaded="AppShell_OnLoaded">
+    <TabBar>
+        <Tab Title="{x:Static resx:AppResources.Pages_Home}" Icon="home.png">
+            <ShellContent ContentTemplate="{DataTemplate homepages:HomePage}"/>
+        </Tab>
+        <Tab Title="{x:Static resx:AppResources.Pages_Transactions}" Icon="transactions.png">
+            <ShellContent ContentTemplate="{DataTemplate transactionpages:TransactionsPage}"/>
+        </Tab>
+        <Tab Title="{x:Static resx:AppResources.Pages_Overview}" Icon="chart.png">
+            <ShellContent ContentTemplate="{DataTemplate overviewpages:OverviewPage}"/>
+        </Tab>
+        <Tab Title="{x:Static resx:AppResources.Pages_Settings}" Icon="settings.png">
+            <ShellContent ContentTemplate="{DataTemplate settingspages:SettingsPage}"/>
+        </Tab>
+    </TabBar>
+</Shell>
