@@ -8,7 +8,7 @@ namespace BudgetWise.Mobile.Views.Overview.Pages;
 public partial class OverviewPage : BaseContentPage
 {
     private readonly OverviewPageViewModel _viewModel;
-    
+
     public OverviewPage(OverviewPageViewModel viewModel)
     {
         InitializeComponent();
@@ -35,7 +35,7 @@ public partial class OverviewPage : BaseContentPage
                     }
                 });
             }
-            
+
             await _viewModel.Initialize();
             CalculationTypePicker.SelectedItem = _viewModel.SelectedDisplayCalculationType;
         });

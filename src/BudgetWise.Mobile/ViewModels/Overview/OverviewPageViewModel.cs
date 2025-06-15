@@ -1,20 +1,22 @@
-using System.Collections.ObjectModel;
-using LiveChartsCore;
-using LiveChartsCore.SkiaSharpView;
-using LiveChartsCore.SkiaSharpView.Drawing.Geometries;
 using BudgetWise.Core.Domain.Abstractions.Services;
 using BudgetWise.Core.Domain.Model.Shared.ValueObjects;
 using BudgetWise.Core.Domain.Model.Summaries;
 using BudgetWise.Core.Domain.Model.Summaries.ValueObjects;
 using BudgetWise.Mobile.Abstractions;
 using BudgetWise.Mobile.Resources.Strings;
+using LiveChartsCore;
+using LiveChartsCore.SkiaSharpView;
+using LiveChartsCore.SkiaSharpView.Drawing.Geometries;
+using LiveChartsCore.SkiaSharpView.Painting;
+using SkiaSharp;
+using System.Collections.ObjectModel;
 
 namespace BudgetWise.Mobile.ViewModels.Overview;
 
 public class OverviewPageViewModel : BaseNotifyObject
 {
     private readonly ICalculationService _calculationService;
-    
+
     private readonly ObservableCollection<decimal> _categoriesExpensesValues = [];
     private readonly ObservableCollection<string> _categoriesExpensesLabelsValues = [];
     private readonly ObservableCollection<decimal> _mainSpendingTypeExpenses = [];
@@ -29,11 +31,11 @@ public class OverviewPageViewModel : BaseNotifyObject
     private readonly ObservableCollection<string> _dailyExpensesLabelsValues = [];
     private readonly ObservableCollection<decimal> _weeklyExpensesValues = [];
     private readonly ObservableCollection<string> _weeklyExpensesLabelsValues = [];
-    
+
     private SummaryCalculationDisplayType _selectedDisplayCalculationType = DisplayCalculationTypes[0];
     private bool _isShowDailyExpenses;
     private bool _isShowWeeklyExpenses;
-    
+
     public OverviewPageViewModel(ICalculationService calculationService)
     {
         _calculationService = calculationService;
@@ -50,7 +52,14 @@ public class OverviewPageViewModel : BaseNotifyObject
 
         CategoriesExpensesLabels =
         [
-            new Axis { Labels = _categoriesExpensesLabelsValues }
+            new Axis
+            {
+               Labels = _categoriesExpensesLabelsValues,
+               LabelsRotation = 90,
+               UnitWidth = 1,
+               TextSize = 10,
+               Padding = new LiveChartsCore.Drawing.Padding(1)
+            }
         ];
 
         SpendingTypeDistribution =
@@ -58,17 +67,29 @@ public class OverviewPageViewModel : BaseNotifyObject
             new PieSeries<decimal>
             {
                 Values = _mainSpendingTypeExpenses,
-                Name = AppResources.OverView_SpendingType_Main
+                Name = AppResources.OverView_SpendingType_Main,
+                DataLabelsFormatter = point => point.Model.ToString(),
+                DataLabelsSize = 10,
+                DataLabelsPosition = LiveChartsCore.Measure.PolarLabelsPosition.Middle,
+                DataLabelsPaint = new SolidColorPaint(SKColors.White)
             },
             new PieSeries<decimal>
             {
                 Values = _secondarySpendingTypeExpenses,
-                Name = AppResources.Overview_SpendingType_Secondary
+                Name = AppResources.Overview_SpendingType_Secondary,
+                DataLabelsFormatter = point => point.Model.ToString(),
+                DataLabelsSize = 10,
+                DataLabelsPosition = LiveChartsCore.Measure.PolarLabelsPosition.Middle,
+                DataLabelsPaint = new SolidColorPaint(SKColors.White)
             },
             new PieSeries<decimal>
             {
                 Values = _savedSpendingTypeExpenses,
-                Name = AppResources.Overview_SpendingType_Saved
+                Name = AppResources.Overview_SpendingType_Saved,
+                DataLabelsFormatter = point => point.Model.ToString(),
+                DataLabelsSize = 10,
+                DataLabelsPosition = LiveChartsCore.Measure.PolarLabelsPosition.Middle,
+                DataLabelsPaint = new SolidColorPaint(SKColors.White)
             }
         ];
 
@@ -77,12 +98,20 @@ public class OverviewPageViewModel : BaseNotifyObject
             new PieSeries<decimal>
             {
                 Values = _totalIncome,
-                Name = AppResources.Overview_Income
+                Name = AppResources.Overview_Income,
+                DataLabelsFormatter = point => point.Model.ToString(),
+                DataLabelsSize = 10,
+                DataLabelsPosition = LiveChartsCore.Measure.PolarLabelsPosition.Middle,
+                DataLabelsPaint = new SolidColorPaint(SKColors.White)
             },
             new PieSeries<decimal>
             {
                 Values = _totalExpense,
-                Name = AppResources.Overview_Expense
+                Name = AppResources.Overview_Expense,
+                DataLabelsFormatter = point => point.Model.ToString(),
+                DataLabelsSize = 10,
+                DataLabelsPosition = LiveChartsCore.Measure.PolarLabelsPosition.Middle,
+                DataLabelsPaint = new SolidColorPaint(SKColors.White)
             }
         ];
 
@@ -94,7 +123,14 @@ public class OverviewPageViewModel : BaseNotifyObject
 
         PlannedAndActualCategoriesAmountsLabels =
         [
-            new Axis { Labels = _plannedCategoriesExpensesLabels }
+            new Axis
+            {
+               Labels = _plannedCategoriesExpensesLabels,
+               LabelsRotation = 90,
+               UnitWidth = 1,
+               TextSize = 10,
+               Padding = new LiveChartsCore.Drawing.Padding(1)
+            }
         ];
 
         DailyExpenses =
@@ -107,10 +143,17 @@ public class OverviewPageViewModel : BaseNotifyObject
                 GeometryStroke = null
             }
         ];
-        
+
         DailyExpensesLabels =
         [
-            new Axis { Labels = _dailyExpensesLabelsValues }
+            new Axis
+            {
+               Labels = _dailyExpensesLabelsValues,
+               LabelsRotation = 90,
+               UnitWidth = 1,
+               TextSize = 10,
+               Padding = new LiveChartsCore.Drawing.Padding(1)
+            }
         ];
 
         WeeklyExpenses =
@@ -123,13 +166,20 @@ public class OverviewPageViewModel : BaseNotifyObject
                 GeometrySize = 8
             }
         ];
-        
+
         WeeklyExpensesLabels =
         [
-            new Axis { Labels = _weeklyExpensesLabelsValues }
+            new Axis
+            {
+               Labels = _weeklyExpensesLabelsValues,
+               LabelsRotation = 90,
+               UnitWidth = 1,
+               TextSize = 10,
+               Padding = new LiveChartsCore.Drawing.Padding(1)
+            }
         ];
     }
-    
+
     public ISeries[] CategoriesExpenses { get; set; }
     public Axis[] CategoriesExpensesLabels { get; set; }
     public ISeries[] SpendingTypeDistribution { get; set; }
@@ -147,7 +197,7 @@ public class OverviewPageViewModel : BaseNotifyObject
         new(SummaryCalculationType.ForThreeMonths, AppResources.Overview_ForThreeMonths),
         new(SummaryCalculationType.ForSixMonths, AppResources.Overview_ForSixMonths)
     ];
-    
+
     public SummaryCalculationDisplayType SelectedDisplayCalculationType
     {
         get => _selectedDisplayCalculationType;
@@ -172,9 +222,9 @@ public class OverviewPageViewModel : BaseNotifyObject
         {
             SelectedDisplayCalculationType = DisplayCalculationTypes[0];
         }
-        
+
         var summary = await _calculationService.GetSummaryForPeriod(_selectedDisplayCalculationType.CalculationType);
-        
+
         InvalidateSeries();
         DistributeSummary(summary);
     }
@@ -208,10 +258,10 @@ public class OverviewPageViewModel : BaseNotifyObject
         _mainSpendingTypeExpenses.Add(summary.SpendingTypesExpenses[SpendingType.Main]);
         _secondarySpendingTypeExpenses.Add(summary.SpendingTypesExpenses[SpendingType.Secondary]);
         _savedSpendingTypeExpenses.Add(summary.SpendingTypesExpenses[SpendingType.Saved]);
-        
+
         _totalExpense.Add(summary.TotalExpenses);
         _totalIncome.Add(summary.TotalIncome);
-        
+
         foreach (var categoryExpectation in summary.CategoryExpenseExpectations.Values)
         {
             _plannedCategoriesExpenses.Add(categoryExpectation.PlannedAmount);
@@ -219,32 +269,32 @@ public class OverviewPageViewModel : BaseNotifyObject
             _plannedCategoriesExpensesLabels.Add(categoryExpectation.CategoryName);
         }
 
-        IsShowDailyExpenses = _selectedDisplayCalculationType.CalculationType 
+        IsShowDailyExpenses = _selectedDisplayCalculationType.CalculationType
             is SummaryCalculationType.ForMonth
             or SummaryCalculationType.ForThreeMonths;
-        
-        IsShowWeeklyExpenses = _selectedDisplayCalculationType.CalculationType 
+
+        IsShowWeeklyExpenses = _selectedDisplayCalculationType.CalculationType
             is SummaryCalculationType.ForThreeMonths
             or SummaryCalculationType.ForSixMonths;
-        
+
         if (IsShowDailyExpenses)
         {
             DistributeDailyExpenses(summary);
         }
-        
+
         if (IsShowWeeklyExpenses)
         {
             DistributeWeeklyExpenses(summary);
         }
     }
-    
+
     private void DistributeDailyExpenses(Summary summary)
     {
         if (summary.DailyExpenses is null)
         {
             return;
         }
-        
+
         foreach (var dailyExpense in summary.DailyExpenses)
         {
             _dailyExpensesValues.Add(dailyExpense.Amount);
@@ -258,11 +308,11 @@ public class OverviewPageViewModel : BaseNotifyObject
         {
             return;
         }
-            
+
         foreach (var weeklyExpense in summary.WeeklyExpenses)
         {
             var dateStr = $"{weeklyExpense.DateFrom.Date:dd.MM} - {weeklyExpense.DateTo.Date:dd.MM}";
-                
+
             _weeklyExpensesValues.Add(weeklyExpense.Amount);
             _weeklyExpensesLabelsValues.Add(dateStr);
         }
@@ -276,7 +326,7 @@ public class SummaryCalculationDisplayType
         CalculationType = type;
         DisplayName = displayName;
     }
-        
+
     public SummaryCalculationType CalculationType { get; }
     public string DisplayName { get; }
 }
